@@ -40,3 +40,6 @@ Repository Settings → Secrets and variables → Actions에 `SUPABASE_SECRET_KE
 
 ## 브리프 성분 관심도
 네이버 API HUB 쇼핑인사이트를 매일 1회 호출합니다. 건강식품(50000023) 분야에서 검토된 비타민D·비타민C·마그네슘을 동일 요청으로 비교합니다. 전일까지 14일 데이터를 lw_briefs.payload.insights에 날짜별 저장합니다. 최근 7일 평균 지수와 이전 7일 평균 지수의 차이가 가장 큰 상승 성분을 선정하며, 모두 상승하지 않으면 최근 7일 평균이 높은 성분을 선정합니다. 14일 데이터가 완전하지 않거나 API가 실패하면 기존 가이드를 순환합니다. Google RSS 뉴스는 유지하며 뉴스가 있는 날에도 보조 성분 가이드에 같은 선정 기준을 적용합니다. 방문자 화면과 HTML 저장 파일에 선정 이유를 표시합니다. 상대 클릭 지수는 실제 클릭 수·판매량·효능이 아닙니다. 기존 NCP_APIGW_API_KEY_ID, NCP_APIGW_API_KEY Actions Secret만 서버에서 사용합니다.
+
+## SEO
+빌드 시 공개 Supabase 데이터로 홈·products.html·briefs/YYYY-MM-DD.html(최근 30일)을 정적 렌더링합니다. 본문·고유 메타데이터·canonical·Open Graph·WebSite/WebPage JSON-LD·sitemap.xml을 생성합니다. 매일 수집 성공 시 Pages 워크플로가 다시 실행되어 정적 본문과 사이트맵이 갱신됩니다. 검색엔진 등록용 사이트맵: https://ogoon-pixel.github.io/lunaya-wellness/sitemap.xml . GitHub 프로젝트 사이트는 도메인 루트 robots.txt를 관리할 수 없으므로 페이지별 robots 메타를 사용합니다. Search Console·네이버 서치어드바이저 등록은 소유자 계정의 인증이 별도 필요하며 색인·순위는 보장되지 않습니다.
