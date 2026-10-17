@@ -17,3 +17,5 @@ await fs.writeFile('dist/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><ur
 await fs.writeFile('dist/404.html','<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>페이지를 찾을 수 없습니다 · 루나야</title></head><body><h1>페이지를 찾을 수 없습니다</h1><a href="'+SITE+'">루나야 홈으로</a></body></html>');
 await fs.writeFile('dist/.nojekyll','');
 console.log('SEO: '+urls.length+' pages rendered with DB content, canonical, metadata, schema and sitemap.');
+
+await fs.copyFile('coupang-banner.html','dist/coupang-banner.html');
