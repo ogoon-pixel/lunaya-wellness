@@ -24,7 +24,7 @@ Node.js 22 이상에서 `npm ci`, `npm test`, `npm run dev`, `npm run build`를 
 ## 자동 갱신
 GitHub Actions `refresh.yml`이 한국 시간 오전 8시에 수집합니다. GitHub 스케줄은 지연될 수 있습니다.
 Repository Settings → Secrets and variables → Actions에 `SUPABASE_SECRET_KEY`를 등록합니다.
-선택적으로 `NCP_APIGW_API_KEY_ID`, `NCP_APIGW_API_KEY`를 등록하면 네이버 API HUB 뉴스 검색을 매일 2회 실행합니다. `ELEVENST_API_KEY`는 11번가 상품 검색용입니다.
+뉴스는 Google 뉴스 RSS로 수집합니다. 네이버 API는 호출하지 않습니다. 선택적으로 `ELEVENST_API_KEY`를 등록하면 11번가 상품 검색을 활성화할 수 있습니다.
 네이버 쇼핑 검색 API는 2026-07-31 종료되어 호출하지 않습니다. API HUB 쇼핑 인사이트는 상품·가격 검색 API가 아닙니다.
 쿠팡·아이허브 등 자동 접근이 제한된 상품은 가격 미확인으로 표시합니다. 접근 제한을 우회하지 않습니다.
 검색 링크는 검색 결과를 여는 기능이며, 그 자체를 수집·가격 검증 완료로 간주하지 않습니다.
