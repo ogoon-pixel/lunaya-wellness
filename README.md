@@ -9,7 +9,7 @@ DB: Supabase 프로젝트 `dnpxtlfwnnmoezatebss` (Lunaya Wellness, 서울)
 - 브리프·상품·가격·수집 상태는 Supabase PostgreSQL에 저장합니다.
 - 공개 방문자는 RLS 정책에 따라 `lw_products`, `lw_briefs`, `lw_source_status`만 읽습니다.
 - `lw_crawl_runs`는 서버 작업만 접근합니다. 브라우저에서 DB 쓰기를 허용하지 않습니다.
-- 공개 연결 키는 `public/config.json`에 있습니다. 서버 비밀키는 절대로 코드에 넣지 않습니다.
+- 공개 연결 키는 `config.json`에 있습니다. 서버 비밀키는 절대로 코드에 넣지 않습니다.
 - 비교 대상: 아이허브, 국내 브랜드몰, 네이버 스마트스토어·쇼핑, 쿠팡, 11번가, G마켓 검색.
 - 카테고리: 비타민D, 오메가3, 마그네슘, 유산균, 비타민C, 종합비타민, 간영양제, 탈모·모발, 뇌영양제, 키영양제.
 
