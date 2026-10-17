@@ -1,0 +1,14 @@
+create table if not exists public.lw_products(id text primary key,name text not null,category text not null,shop text not null,payload jsonb not null,updated_at timestamptz not null default now());
+create table if not exists public.lw_briefs(day date primary key,payload jsonb not null,updated_at timestamptz not null default now());
+create table if not exists public.lw_source_status(id text primary key,payload jsonb not null,updated_at timestamptz not null default now());
+create table if not exists public.lw_crawl_runs(id uuid primary key default gen_random_uuid(),payload jsonb not null,created_at timestamptz not null default now());
+alter table public.lw_products enable row level security;
+alter table public.lw_briefs enable row level security;
+alter table public.lw_source_status enable row level security;
+alter table public.lw_crawl_runs enable row level security;
+create policy "Public product read" on public.lw_products for select to anon,authenticated using(true);
+create policy "Public brief read" on public.lw_briefs for select to anon,authenticated using(true);
+create policy "Public source status read" on public.lw_source_status for select to anon,authenticated using(true);
+grant usage on schema public to anon,authenticated,service_role;
+grant select on public.lw_products,public.lw_briefs,public.lw_source_status to anon,authenticated;
+grant all on public.lw_products,public.lw_briefs,public.lw_source_status,public.lw_crawl_runs to service_role;
