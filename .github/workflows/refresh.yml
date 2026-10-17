@@ -25,4 +25,6 @@ jobs:
         env:
           SUPABASE_URL: https://dnpxtlfwnnmoezatebss.supabase.co
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          NCP_APIGW_API_KEY_ID: ${{ secrets.NCP_APIGW_API_KEY_ID }}
+          NCP_APIGW_API_KEY: ${{ secrets.NCP_APIGW_API_KEY }}
           ELEVENST_API_KEY: ${{ secrets.ELEVENST_API_KEY }}
