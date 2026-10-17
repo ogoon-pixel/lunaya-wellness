@@ -1,6 +1,11 @@
 export type Product={platform?:string;seller?:string;sourceKind?:string;id:string;name:string;brand:string;manufacturer:string|null;category:string;shop:string;url:string;image:string|null;price:number|null;currency:string;rating:number|null;reviewCount:number|null;checkedAt:string|null;attemptedAt:string|null;status:string;note:string|null};
 export const CATEGORIES=['전체','비타민D','오메가3','마그네슘','유산균','비타민C','종합비타민','간영양제','탈모·모발','뇌영양제','키영양제'];
 export const SOURCES=[
+{"id":"daewoong-706","shop":"대웅제약 공식몰","brand":"대웅제약","category":"간영양제","url":"https://www.dwhcmall.com/product/detail.html?product_no=706","name":"에너씨슬 플래티넘"},
+{"id":"daewoong-816","shop":"대웅제약 공식몰","brand":"대웅제약","category":"종합비타민","url":"https://www.dwhcmall.com/product/detail.html?product_no=816","name":"합쎈 오비씨디유마아"},
+{"id":"daewoong-943","shop":"대웅제약 공식몰","brand":"대웅제약","category":"키영양제","url":"https://www.dwhcmall.com/product/detail.html?product_no=943","name":"합쎈 키즈 오미디유"},
+{"id":"daewoong-819","shop":"대웅제약 공식몰","brand":"대웅제약","category":"오메가3","url":"https://www.dwhcmall.com/product/detail.html?product_no=819","name":"건강한 혈행관리 rTG 오메가3"},
+{"id":"daewoong-828","shop":"대웅제약 공식몰","brand":"대웅제약","category":"비타민C","url":"https://www.dwhcmall.com/product/detail.html?product_no=828","name":"항산화 비타민C"},
 {id:'esther-liver',shop:'에스더몰',brand:'에스더포뮬러',category:'간영양제',url:'https://www.esthermall.co.kr/pack/goods/goods_view.php?goodsNo=1000000672',name:'피로·스트레스 에스더팩 (밀크씨슬+피로날린+멀티비타민)'},
 {id:'esther-brain',shop:'에스더몰',brand:'에스더포뮬러',category:'뇌영양제',url:'https://www.esthermall.co.kr/goods/goods_view.php?goodsNo=1000002457',name:'여에스더 포스파티딜세린 PS 5박스'},
 {id:'esther-kids',shop:'에스더몰',brand:'에스더포뮬러',category:'키영양제',url:'https://m.esthermall.co.kr/goods/goods_view.php?goodsNo=45',name:'여에스더 for Kids 멀티비타민 미네랄 gummy'},
