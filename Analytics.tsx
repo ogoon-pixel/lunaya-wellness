@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import config from './config.json';
-const BASE='/lunaya-wellness/';const EMAIL='ohjungin@lunaya.invalid';
+const BASE='/lunaya-wellness/';const EMAIL='ogoon@ogoonshop.com';
 async function rpc(token:string,days:number){const r=await fetch(config.url+'/rest/v1/rpc/lw_analytics_report',{method:'POST',headers:{apikey:config.publishableKey,Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({p_days:days})});if(!r.ok)throw Error(r.status===403?'관리자 권한이 설정되지 않았습니다.':r.status===401?'로그인이 만료되었습니다. 다시 로그인해 주세요.':'통계를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.');return r.json()}
 const n=(value:any)=>Number(value||0).toLocaleString('ko-KR');const stamp=(s:string)=>new Date(s).toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
 export default function Analytics(){const [token,setToken]=useState(()=>{try{return sessionStorage.getItem('lunaya-admin-token')||''}catch{return ''}}),[username,setUsername]=useState(''),[password,setPassword]=useState(''),[days,setDays]=useState(7),[data,setData]=useState<any>(null),[busy,setBusy]=useState(false),[error,setError]=useState('');
