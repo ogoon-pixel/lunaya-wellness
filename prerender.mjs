@@ -19,3 +19,6 @@ await fs.writeFile('dist/.nojekyll','');
 console.log('SEO: '+urls.length+' pages rendered with DB content, canonical, metadata, schema and sitemap.');
 
 await fs.copyFile('coupang-banner.html','dist/coupang-banner.html');
+
+await fs.writeFile('dist/admin.html',template.replace('<!--SEO_HEAD-->','<title>접속 통계 관리자 · 루나야</title><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="same-origin">').replace(/<script async src="https:\/\/pagead2[^<]*<\/script>/,''));
+await fs.copyFile('analytics-info.html','dist/analytics-info.html');
