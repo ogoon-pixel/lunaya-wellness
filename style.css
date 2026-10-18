@@ -29,3 +29,5 @@ h1,h2,h3,p{word-break:keep-all}h3 a{overflow-wrap:anywhere}
 .reading-guides{margin:32px 0;padding:28px;background:#e8eddf;border:1px solid var(--line);border-radius:6px}.reading-guides p{font-size:13px}.reading-guides>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.reading-guides a{background:#fff;padding:18px;font-size:12px;line-height:1.8;border-radius:4px}.header nav{gap:24px}footer>span{line-height:2.3}@media(max-width:700px){.reading-guides>div{grid-template-columns:1fr}.header nav{gap:18px;flex-wrap:wrap}}
 
 .publication-meta{font-size:11px;line-height:1.9;color:#71816b}.brief-analysis{background:#fff;border:1px solid var(--line);padding:28px;border-radius:6px;margin:20px 0 28px}.brief-analysis h3{font-size:22px}.brief-analysis h4{font-size:14px;margin-bottom:8px}.brief-analysis p,.brief-analysis li{font-size:13px;line-height:1.9}.rss-heading{font-size:15px}
+
+.header nav .nav-reading-guide{font-size:12px;font-weight:500;margin-left:12px;white-space:nowrap}@media(max-width:700px){.header nav .nav-reading-guide{font-size:11px;margin-left:auto}}
