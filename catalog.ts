@@ -1,3 +1,4 @@
+import {enrichGuide} from './guide-details';
 export type Product={platform?:string;seller?:string;sourceKind?:string;id:string;name:string;brand:string;manufacturer:string|null;category:string;shop:string;url:string;image:string|null;price:number|null;currency:string;rating:number|null;reviewCount:number|null;checkedAt:string|null;attemptedAt:string|null;status:string;note:string|null};
 export const CATEGORIES=['전체','비타민D','오메가3','마그네슘','유산균','비타민C','종합비타민','간영양제','탈모·모발','뇌영양제','키영양제'];
 export const SOURCES=[
@@ -31,3 +32,5 @@ export const categoryNotes:Record<string,string>={'간영양제':'간 건강 관
 export function marketplaceLinks(category:string){const q=encodeURIComponent(categoryQueries[category]||'건강기능식품');return [{name:'네이버 스마트스토어·쇼핑',url:'https://search.shopping.naver.com/search/all?query='+q},{name:'쿠팡',url:'https://www.coupang.com/np/search?q='+q},{name:'11번가',url:'https://search.11st.co.kr/Search.tmall?kwd='+q},{name:'G마켓',url:'https://browse.gmarket.co.kr/search?keyword='+q}]}
 
 guides.push({...guide,id:'omega3',category:'오메가3',title:'오메가3, EPA와 DHA 표시부터 읽어보세요',intro:'생선과 보충제에 들어 있는 오메가3. 원료 총량과 EPA·DHA 함량을 구분해 살펴봅니다.',sections:[{title:'성분과 기능',text:'ALA·EPA·DHA는 오메가3 지방산의 종류입니다. 세포막의 구성 성분이며 생선·견과류·식물성 기름 등에서 섭취할 수 있습니다.'},{title:'효과·효능',text:'EPA·DHA는 중성지방 수치 감소와 관련이 있지만, 보충제의 효과는 목적과 개인 상태에 따라 다릅니다. 질병 치료를 위해 임의로 고용량을 섭취하지 마세요.'},{title:'섭취 방법',text:'제품 라벨의 1일 섭취량을 따르세요. 어유 총량과 EPA·DHA의 합산 함량을 구분하고, 다른 보충제와 중복되는지 확인하세요.'},{title:'식사와 함께 살펴보기',text:'생선·해산물, 견과류·씨앗류 등 식품에서도 오메가3를 섭취할 수 있습니다. 보충제 필요 여부는 평소 식사와 함께 판단하세요.'},{title:'섭취 전 확인',text:'고용량은 항응고제와 상호작용할 수 있습니다. 약을 복용하거나 질환이 있다면 의료진과 먼저 상담하세요.'}],source:{name:'미국 NIH ODS · Omega-3 Fatty Acids',url:'https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/'}});
+
+for(const item of guides)Object.assign(item,enrichGuide(item));
