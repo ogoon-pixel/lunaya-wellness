@@ -31,3 +31,5 @@ h1,h2,h3,p{word-break:keep-all}h3 a{overflow-wrap:anywhere}
 .publication-meta{font-size:11px;line-height:1.9;color:#71816b}.brief-analysis{background:#fff;border:1px solid var(--line);padding:28px;border-radius:6px;margin:20px 0 28px}.brief-analysis h3{font-size:22px}.brief-analysis h4{font-size:14px;margin-bottom:8px}.brief-analysis p,.brief-analysis li{font-size:13px;line-height:1.9}.rss-heading{font-size:15px}
 
 .header nav .nav-reading-guide{font-size:12px;font-weight:500;margin-left:12px;white-space:nowrap}@media(max-width:700px){.header nav .nav-reading-guide{font-size:11px;margin-left:auto}}
+
+.adsense-sidebar{margin-top:26px;width:200px;max-width:100%;background:transparent}.adsense-sidebar .adsbygoogle{width:100%;min-height:250px}.adsense-sidebar .coupang-banner-label{margin-bottom:10px}
