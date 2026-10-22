@@ -33,3 +33,5 @@ h1,h2,h3,p{word-break:keep-all}h3 a{overflow-wrap:anywhere}
 .header nav .nav-reading-guide{font-size:12px;font-weight:500;margin-left:12px;white-space:nowrap}@media(max-width:700px){.header nav .nav-reading-guide{font-size:11px;margin-left:auto}}
 
 .adsense-sidebar{margin-top:26px;width:200px;max-width:100%;background:transparent}.adsense-sidebar .adsbygoogle{width:100%;min-height:250px}.adsense-sidebar .coupang-banner-label{margin-bottom:10px}
+
+.adsense-infeed{min-width:0;align-self:stretch;background:transparent;padding:12px;border:1px solid var(--line);border-radius:12px}.adsense-infeed .adsbygoogle{width:100%;min-height:250px}
